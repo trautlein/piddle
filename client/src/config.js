@@ -1,6 +1,13 @@
-const hostname = 'http://localhost';
-const serverPort = '3000';
-const baseUrl = hostname + ":" + serverPort;
+const differentHostname = '';
 
-process.env.BASE_URL = '' || baseUrl;
+const prepend = 'http://';
+const normalHostname = 'localhost';
+const serverPort = '3000';
+const normalUrl = prepend + (differentHostname ? differentHostname : normalHostname) + ":" + serverPort;
+
+
+
+const fullUrl = || normalUrl;
+
+process.env.BASE_URL = '' || fullUrl;
 
